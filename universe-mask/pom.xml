@@ -14,11 +14,11 @@
 
 	<groupId>cn.xgt</groupId>
 	<artifactId>universe-mask</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0</version>  <!-- 改为正式版本 -->
 	<packaging>jar</packaging>
 
 	<name>Universe Mask</name>
-	<description>脱敏工具</description>
+	<description>数据脱敏工具，支持姓名、手机号、身份证、银行卡、邮箱等多种脱敏策略</description>
 	<url>https://github.com/1576745517/Universe</url>
 
 	<properties>
