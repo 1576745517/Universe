@@ -1,5 +1,7 @@
 package cn.xgt;
 
+import org.springframework.boot.SpringApplication;
+
 /**
  * @author XGT
  * @description TODO
@@ -7,6 +9,6 @@ package cn.xgt;
  */
 public class UniverseMaskApplication {
 	public static void main(String[] args) {
-		System.out.println("Hello world!");
+		SpringApplication.run(UniverseMaskApplication.class, args);
 	}
 }

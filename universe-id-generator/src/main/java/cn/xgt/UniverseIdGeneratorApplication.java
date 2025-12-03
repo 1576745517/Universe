@@ -1,5 +1,7 @@
 package cn.xgt;
 
+import org.springframework.boot.SpringApplication;
+
 /**
  * @author XGT
  * @description TODO
@@ -7,6 +9,6 @@ package cn.xgt;
  */
 public class UniverseIdGeneratorApplication {
 	public static void main(String[] args) {
-		System.out.println("Hello world!");
+		SpringApplication.run(UniverseIdGeneratorApplication.class, args);
 	}
 }
