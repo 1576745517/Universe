@@ -14,7 +14,7 @@
 
 	<groupId>cn.xgt</groupId>
 	<artifactId>universe-mask</artifactId>
-	<version>1.0.0</version>  <!-- 改为正式版本 -->
+	<version>1.0.4</version>  <!-- 改为正式版本 -->
 	<packaging>jar</packaging>
 
 	<name>Universe Mask</name>
