@@ -5,32 +5,56 @@ package cn.xgt.vo;
  * @date 2023/12/27
  */
 
+import cn.xgt.universe.mask.anontation.Mask;
+import cn.xgt.universe.mask.constant.CATEGORT;
 import lombok.Data;
+import lombok.experimental.FieldNameConstants;
 
 /**
- * 客户信息表;
- * @author : XGT
- * @date : 2023-12-27
+ * @author XGT
+ * @description Entity
+ * @date 2025/12/3
  */
 @Data
+@FieldNameConstants
 public class CustomerEntity {
-    /** 客户姓名 */
-    private String name ;
-    /** 证件类别。96.香港身份证,97.澳门身份证,98.台湾身份证,111.居民身份证,414.普通护照,511.台湾居民来往大陆通行证,516.港澳居民来往内地通行证,517.大陆居民往来台湾通行证,714.统一社会信用代码 */
-    private String cardType ;
-    /** 证件号 */
-    /*@Mask(category = CATEGORT.ID_NUM)*/
-    private String cardNo ;
-    /** 性别。1.男，2.女 */
-    private String sex ;
-    /** 客户经理员工编号 */
-    private String crmNo ;
-    /** 客户经理姓名 */
-    private String crmName ;
-    /** 渠道编号 */
-    private String channelNo ;
-    /** 渠道客户编号 */
-    private String channelCustomerNo ;
+    /**
+     *
+     */
+    /** 客户姓名 - 使用姓名脱敏策略 */
+    @Mask(category = CATEGORT.NAME)
+    private String name;
+
+    /** 手机号 - 使用手机号脱敏策略 */
+    @Mask(category = CATEGORT.MOBILE)
+    private String mobile;
+
+    /** 证件号 - 使用身份证脱敏策略 */
+    @Mask(category = CATEGORT.ID_NUM)
+    private String cardNo;
+
+    /** 银行卡号 - 使用银行卡脱敏策略 */
+    @Mask(category = CATEGORT.CARD_NUM)
+    private String bankCardNo;
+
+    /** 邮箱 - 使用邮箱脱敏策略 */
+    @Mask(category = CATEGORT.EMAIL)
+    private String email;
+
+    /** 地址 - 使用地址脱敏策略 */
+    @Mask(category = CATEGORT.ADDRESS)
+    private String address;
+
+    /** 金额 - 使用金额脱敏策略 */
+    @Mask(category = CATEGORT.MONEY)
+    private String money;
+
+    /** 自定义脱敏 - 显示前3位，后2位 */
+    @Mask(category = CATEGORT.CUSTOM, prefixNoMaskLen = 3, suffixNoMaskLen = 3, asterisk = "*")
+    private String customField;
+
+    /** 正常返现字段.非脱敏 */
+    private String normalField;
 
 
 }

@@ -1,0 +1,14 @@
+# ID生成器配置
+universe:
+  id-generator:
+    enabled: true
+    key-prefix: id_generator
+    default-key: id_generator_default
+    expire-time: 0
+
+# Redis配置（ID生成器需要）
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    database: 0

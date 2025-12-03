@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author XGT
- * @description TODO
+ * @description Demo Test
  * @date 2025/12/2
  */
 @SpringBootApplication
