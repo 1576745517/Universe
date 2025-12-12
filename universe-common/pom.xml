@@ -4,9 +4,16 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- 继承父 pom -->
+	<parent>
+		<groupId>cn.xgt</groupId>
+		<artifactId>universe-parent</artifactId>
+		<version>1.0.8</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
 	<groupId>cn.xgt</groupId>
 	<artifactId>universe-common</artifactId>
-	<version>1.0.7</version>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
@@ -16,11 +23,18 @@
 
 	<dependencies>
 
+		<!-- Spring Boot Starter (提供 Spring 核心功能，包括 @Component, @Autowired, ApplicationContext 等) -->
+		<!-- 使用 compile 作用域，以便依赖 universe-common 的模块能够编译通过 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<!-- 版本由父 POM 的 dependencyManagement 管理 -->
+		</dependency>
+
 		<!-- Spring Boot Configuration Processor -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-			<version>2.7.18</version>
 			<optional>true</optional>
 		</dependency>
 
@@ -28,54 +42,32 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
-			<version>2.7.18</version>
-		</dependency>
-
-		<!-- Lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.30</version>
-			<optional>true</optional>
+			<!-- 版本由父 POM 管理，但如果需要可显式指定 -->
 		</dependency>
 
 		<!-- SLF4J API -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.36</version>
-		</dependency>
-
-		<!-- Spring Boot Core -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot</artifactId>
-			<version>2.7.18</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>2.7.18</version>
+			<!-- 版本由 Spring Boot Parent 管理 -->
 		</dependency>
 
 		<!-- Jackson Core (与jackson-databind 2.14.2匹配) -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.14.2</version>
+			<!-- 版本由 Spring Boot Parent 管理 -->
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.12.0</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<!-- 版本由 Spring Boot Parent 管理 -->
 		</dependency>
-
 		<dependency>
-			<groupId>cn.hutool</groupId>
-			<artifactId>hutool-all</artifactId>
-			<version>5.8.18</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<!-- 版本由 Spring Boot Parent 管理 -->
 		</dependency>
 
 		<!-- Lombok -->
@@ -86,14 +78,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.15.2</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<!-- 版本由 Spring Boot Parent 管理 -->
 		</dependency>
+
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.15.2</version>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.18</version>
 		</dependency>
 	</dependencies>
 

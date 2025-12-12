@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>cn.xgt</groupId>
 		<artifactId>universe-parent</artifactId>
-		<version>1.0.6</version>
+		<version>1.0.8</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -21,17 +21,10 @@
 
 	<dependencies>
 
-		<!-- 添加 Spring Boot Starter，scope 使用 provided（因为运行时由应用提供） -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>cn.xgt</groupId>
 			<artifactId>universe-common</artifactId>
-			<version>1.0.7</version>
+			<!-- 版本由父 POM 的 dependencyManagement 管理 -->
 		</dependency>
 
 	</dependencies>

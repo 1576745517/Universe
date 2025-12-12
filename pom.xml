@@ -13,7 +13,7 @@
 
 	<groupId>cn.xgt</groupId>
 	<artifactId>universe-parent</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.8</version>
 	<packaging>pom</packaging>
 
 	<name>Universe Parent</name>
@@ -33,6 +33,10 @@
 		<maven.compiler.target>8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring-boot.version>2.7.18</spring-boot.version>
+		<!-- 第三方依赖版本属性 -->
+		<hutool.version>5.8.18</hutool.version>
+		<lombok.version>1.18.30</lombok.version>
+		<commons-lang3.version>3.12.0</commons-lang3.version>
 	</properties>
 
 	<!-- 管理所有子模块 -->
@@ -57,17 +61,17 @@
 			<dependency>
 				<groupId>cn.xgt</groupId>
 				<artifactId>universe-id-generator</artifactId>
-				<version>1.0.6</version>
+				<version>1.0.8</version>
 			</dependency>
 			<dependency>
 				<groupId>cn.xgt</groupId>
 				<artifactId>universe-mask</artifactId>
-				<version>1.0.6</version>
+				<version>1.0.8</version>
 			</dependency>
 			<dependency>
 				<groupId>cn.xgt</groupId>
 				<artifactId>universe-common</artifactId>
-				<version>1.0.7</version>
+				<version>1.0.8</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
