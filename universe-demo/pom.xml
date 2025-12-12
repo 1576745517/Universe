@@ -47,24 +47,15 @@
 		<dependency>
 			<groupId>com.github.1576745517.Universe</groupId>
 			<artifactId>universe-id-generator</artifactId>
-			<version>1.0.5</version>
+			<version>1.0.8</version>
 		</dependency>
 
 		<!-- universe-mask 依赖 -->
 		<dependency>
 			<groupId>com.github.1576745517.Universe</groupId>
 			<artifactId>universe-mask</artifactId>
-			<version>1.0.5</version>
+			<version>1.0.8</version>
 		</dependency>
-
-		<!-- universe-common 依赖 -->
-		<dependency>
-			<groupId>com.github.1576745517.Universe</groupId>
-			<artifactId>universe-common</artifactId>
-			<version>1.0.6</version>
-		</dependency>
-
-
 
 	</dependencies>
 
