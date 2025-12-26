@@ -33,6 +33,12 @@
             <!-- 版本由父 POM 的 dependencyManagement 管理 -->
         </dependency>
 
+        <dependency>
+            <groupId>cn.xgt</groupId>
+            <artifactId>universe-common</artifactId>
+            <!-- 版本由父 POM 的 dependencyManagement 管理 -->
+        </dependency>
+
         <!-- 后续可能增加的其他功能模块，取消注释即可集成 -->
         <!--
         <dependency>

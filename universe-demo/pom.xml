@@ -48,6 +48,7 @@
 			<groupId>com.github.1576745517.Universe</groupId>
 			<artifactId>universe-id-generator</artifactId>
 			<version>1.0.8</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- universe-mask 依赖 -->
@@ -55,6 +56,15 @@
 			<groupId>com.github.1576745517.Universe</groupId>
 			<artifactId>universe-mask</artifactId>
 			<version>1.0.8</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- universe-mask 依赖 -->
+		<dependency>
+			<groupId>cn.xgt</groupId>
+			<artifactId>universe-common</artifactId>
+			<version>1.0.8</version>
+			<scope>compile</scope>
 		</dependency>
 
 	</dependencies>

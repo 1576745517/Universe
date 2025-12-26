@@ -11,7 +11,7 @@ import java.util.Map;
 
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.json.JSONUtil;
-import cn.xgt.vo.CustomerEntity;
+import cn.xgt.vo.MaskEntity;
 
 /**
  * @author XGT
@@ -41,19 +41,19 @@ public class MaskApi {
    * }
    */
   @PostMapping(value = "getInfo1")
-  public CustomerEntity getInfo1(@RequestBody Map<String, Object> param) {
-    CustomerEntity customerEntity = new CustomerEntity();
-    customerEntity.setName(MapUtil.getStr(param, CustomerEntity.Fields.name));
-    customerEntity.setMobile(MapUtil.getStr(param, CustomerEntity.Fields.mobile));
-    customerEntity.setCardNo(MapUtil.getStr(param, CustomerEntity.Fields.cardNo));
-    customerEntity.setBankCardNo(MapUtil.getStr(param, CustomerEntity.Fields.bankCardNo));
-    customerEntity.setEmail(MapUtil.getStr(param, CustomerEntity.Fields.email));
-    customerEntity.setAddress(MapUtil.getStr(param, CustomerEntity.Fields.address));
-    customerEntity.setMoney(MapUtil.getStr(param, CustomerEntity.Fields.money));
-    customerEntity.setCustomField(MapUtil.getStr(param, CustomerEntity.Fields.customField));
-    customerEntity.setNormalField(MapUtil.getStr(param, CustomerEntity.Fields.normalField));
+  public MaskEntity getInfo1(@RequestBody Map<String, Object> param) {
+    MaskEntity maskEntity = new MaskEntity();
+    maskEntity.setName(MapUtil.getStr(param, MaskEntity.Fields.name));
+    maskEntity.setMobile(MapUtil.getStr(param, MaskEntity.Fields.mobile));
+    maskEntity.setCardNo(MapUtil.getStr(param, MaskEntity.Fields.cardNo));
+    maskEntity.setBankCardNo(MapUtil.getStr(param, MaskEntity.Fields.bankCardNo));
+    maskEntity.setEmail(MapUtil.getStr(param, MaskEntity.Fields.email));
+    maskEntity.setAddress(MapUtil.getStr(param, MaskEntity.Fields.address));
+    maskEntity.setMoney(MapUtil.getStr(param, MaskEntity.Fields.money));
+    maskEntity.setCustomField(MapUtil.getStr(param, MaskEntity.Fields.customField));
+    maskEntity.setNormalField(MapUtil.getStr(param, MaskEntity.Fields.normalField));
 
-    logger.info("========================customerEntity:{}", JSONUtil.toJsonStr(customerEntity));
-    return customerEntity;
+    logger.info("========================customerEntity:{}", JSONUtil.toJsonStr(maskEntity));
+    return maskEntity;
   }
 }

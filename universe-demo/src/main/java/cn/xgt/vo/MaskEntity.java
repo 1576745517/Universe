@@ -12,12 +12,12 @@ import lombok.experimental.FieldNameConstants;
 
 /**
  * @author XGT
- * @description Entity
+ * @description MaskEntity
  * @date 2025/12/3
  */
 @Data
 @FieldNameConstants
-public class CustomerEntity {
+public class MaskEntity {
     /**
      *
      */
